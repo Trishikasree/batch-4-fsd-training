@@ -1,0 +1,75 @@
+
+1. Aim
+
+To develop a responsive landing page that adapts effectively to desktop, tablet, and mobile devices.
+
+2. Introduction
+
+Responsive web design is an approach used to create websites that automatically adjust their layout and content according to the screen size and device being used.
+
+3. Responsive Design
+Responsive design allows a webpage to work properly on different screen sizes.
+It improves usability, accessibility, and user experience.
+The layout, images, text, and navigation can adjust based on the device.
+4. Landing Page
+
+A landing page is a webpage designed to present important information about a product, service, event, or organization.
+
+It commonly contains:
+
+Header and navigation
+Hero section
+Images or illustrations
+Content sections
+Call-to-action buttons
+Footer
+5. Desktop Layout
+Provides a wider screen area for displaying content.
+Navigation items can be displayed horizontally.
+Multiple content sections can be arranged side by side.
+Images and text can use larger dimensions.
+6. Tablet Layout
+The layout is adjusted for a medium-sized screen.
+Content spacing and font sizes are reduced when necessary.
+Columns may be rearranged to fit the available width.
+Navigation may be simplified.
+7. Mobile Layout
+Content is arranged mainly in a single-column layout.
+Navigation can be converted into a menu.
+Images are resized to fit the screen.
+Buttons and text are made easily readable and touch-friendly.
+8. Technologies Used
+HTML – Creates the structure of the webpage.
+CSS – Provides styling and responsive layouts.
+Media Queries – Apply different styles based on screen size.
+JavaScript – Can be used to add interactive features.
+9. Responsive Techniques
+
+Students can use:
+
+Flexible layouts
+CSS Flexbox
+CSS Grid
+Relative units such as %, rem, and em
+Responsive images
+CSS media queries
+10. Testing
+
+The landing page should be tested on:
+
+Desktop – Large screen
+Tablet – Medium screen
+Mobile – Small screen
+
+Students verify that the content does not overflow and that all elements remain readable and usable.
+
+11. Learning Outcome
+
+Students understand how to design webpages that automatically adapt to different screen sizes and devices using responsive web design techniques.
+
+12. Conclusion
+
+This activity helps students develop a mobile-friendly and user-friendly landing page. By applying flexible layouts, media queries, Flexbox, and Grid, students learn how the same webpage can provide a consistent experience across desktop, tablet, and mobile devices.
+
+Available next action: 
+Create a downloadable DOCX file here in this chat containing the editable prose above

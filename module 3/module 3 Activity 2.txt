@@ -1,0 +1,102 @@
+ module 3 Activity 2: Team Collaboration Simulation
+1. Aim
+
+To understand how developers collaborate on a software project using Git branches, pull requests, and code reviews.
+
+2. Introduction
+
+Team collaboration is an important part of software development. Git and GitHub provide tools that allow multiple developers to work on the same project without affecting each other’s code.
+
+3. Git
+
+Git is a distributed version control system used to track changes in source code.
+
+It maintains different versions of a project.
+Developers can work independently.
+Changes can be tracked and reverted when required.
+It helps prevent loss of code.
+4. Git Branches
+
+A branch is a separate version of the project where developers can work on a particular feature or modification.
+
+Examples:
+
+main – stable version of the project.
+feature-login – development of the login feature.
+feature-dashboard – development of the dashboard.
+
+Developers can create branches without directly modifying the main code.
+
+5. Team Collaboration Process
+
+A typical collaboration process is:
+
+Main Branch → Create Branch → Make Changes → Commit → Push → Pull Request → Code Review → Merge
+
+Each team member can work on a different feature using a separate branch.
+
+6. Pull Request
+
+A Pull Request (PR) is a request to merge changes from one branch into another branch.
+
+It allows team members to:
+
+Review the code.
+Discuss changes.
+Identify problems.
+Suggest improvements.
+Approve or reject the changes before merging.
+7. Code Review
+
+Code review is the process of checking another developer's code before it is merged.
+
+Team members check:
+
+Code correctness.
+Coding standards.
+Possible errors.
+Security issues.
+Performance.
+Readability and maintainability.
+8. Resolving Conflicts
+
+Sometimes two developers modify the same part of a file. This can create a merge conflict.
+
+The team must:
+
+Identify the conflicting code.
+Decide which changes should be kept.
+Remove the conflict markers.
+Test the updated code.
+Commit and merge the changes.
+9. Technologies Used
+Git – Version control.
+GitHub/GitLab – Online collaboration and repository hosting.
+Git Branches – Separate development areas.
+Pull Requests – Code integration and review.
+Code Review – Quality checking.
+10. Testing and Implementation
+
+Students can simulate a team project by:
+
+Creating a shared GitHub repository.
+Creating separate branches for each team member.
+Making changes in their assigned branches.
+Pushing changes to the remote repository.
+Creating pull requests.
+Reviewing teammates' code.
+Resolving conflicts if they occur.
+Merging approved changes into the main branch.
+11. Learning Outcome
+
+Students will learn how to:
+
+Use Git for version control.
+Create and manage branches.
+Work collaboratively on a project.
+Create and review pull requests.
+Identify and resolve merge conflicts.
+Follow a professional software development workflow.
+12. Conclusion
+
+Team collaboration using Git branches, pull requests, and code reviews provides a safe and organized way for multiple developers to work on the same project. This activity helps students understand the real-world collaborative development process used in software companies.

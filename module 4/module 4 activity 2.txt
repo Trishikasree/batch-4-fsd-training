@@ -1,0 +1,131 @@
+ 
+Activity 2: Dynamic Data Rendering Lab
+1. Aim
+
+To understand how data obtained from APIs can be processed and dynamically displayed on web pages using data-driven UI development techniques.
+
+2. Introduction
+
+Dynamic data rendering is the process of displaying information on a webpage based on data received from an external source such as an API. Instead of manually entering every piece of information, the application retrieves the data and automatically updates the user interface.
+
+3. API Data
+
+An API (Application Programming Interface) allows a web application to communicate with an external server and retrieve data.
+
+The data is commonly provided in JSON format, which can be easily processed using JavaScript.
+
+4. Student Lists
+
+A student list application can retrieve student information from an API and display it dynamically.
+
+The displayed information may include:
+
+Student name
+Register number
+Department
+Year
+Email
+
+When new student data is received, the webpage can automatically display the updated list.
+
+5. Product Catalogs
+
+A product catalog displays information about products retrieved from an API.
+
+It may include:
+
+Product name
+Price
+Image
+Category
+Description
+Availability
+
+The same UI component can be reused to display multiple products.
+
+6. News Feeds
+
+A news application can retrieve the latest news articles from a news API.
+
+The interface may display:
+
+News headline
+Description
+Author
+Published date
+News image
+Article link
+
+This allows users to view updated information without manually modifying the webpage.
+
+7. Weather Information
+
+A weather application can retrieve weather information from a weather API based on a selected location.
+
+It may display:
+
+City name
+Temperature
+Weather condition
+Humidity
+Wind speed
+Weather icon
+
+The information can change dynamically based on the user's selected location.
+
+8. Dynamic Rendering Process
+
+The basic process is:
+
+User Action → API Request → Server Response → JSON Data → Data Processing → UI Update
+
+For example:
+
+Select City → Request Weather Data → Receive JSON → Extract Temperature → Display Weather Information
+
+9. Technologies Used
+HTML – Creates the basic webpage structure.
+CSS – Provides styling and responsive layout.
+JavaScript – Fetches and processes API data.
+Fetch API – Sends requests to external APIs.
+JSON – Represents and transfers structured data.
+React.js – Can be used to create reusable components and render data dynamically.
+10. Error Handling
+
+Applications should handle situations where data cannot be retrieved.
+
+Common problems include:
+
+Internet connection failure.
+Invalid API request.
+Incorrect location or search input.
+API server unavailable.
+Missing or incomplete data.
+
+The application can display messages such as "Unable to load data. Please try again."
+
+11. Implementation Process
+
+Students can perform the activity using the following steps:
+
+Select a suitable public API.
+Send a request using JavaScript.
+Receive the response from the API.
+Convert the response into usable JSON data.
+Extract the required information.
+Create UI elements dynamically.
+Display the retrieved information.
+Test the application with different data and inputs.
+12. Learning Outcome
+
+Students will be able to:
+
+Understand API-based data retrieval.
+Process JSON data using JavaScript.
+Dynamically update webpage content.
+Create data-driven user interfaces.
+Handle API errors and invalid responses.
+Understand how real-world applications display continuously changing data.
+13. Conclusion
+
+The Dynamic Data Rendering Lab helps students understand how modern web applications use external data to create dynamic and interactive user interfaces. By working with student lists, product catalogs, news feeds, and weather information, students gain practical knowledge of API integration and data-driven UI development.

@@ -1,0 +1,154 @@
+ module 3 Activity 3: Debugging Challenge
+1. Aim
+
+To identify, analyze, and fix intentionally introduced bugs in JavaScript applications and improve debugging skills.
+
+2. Introduction
+
+Debugging is the process of finding and correcting errors in a program. Bugs can cause an application to produce incorrect results, stop working, or behave unexpectedly. Debugging helps developers improve the correctness, reliability, and performance of applications.
+
+3. Types of Errors
+
+JavaScript applications may contain different types of errors.
+
+Syntax Errors: Occur when code violates JavaScript syntax rules.
+
+Runtime Errors: Occur while the program is executing.
+
+Logical Errors: Occur when the program runs but produces incorrect results.
+
+4. Identifying Bugs
+
+Students examine the given JavaScript code to identify problems.
+
+Common bugs include:
+
+Missing brackets or semicolons where required.
+
+Incorrect variable names.
+
+Using the wrong operators.
+
+Incorrect conditional statements.
+
+Infinite loops.
+
+Improper function calls.
+
+5. Debugging Techniques
+
+Debugging techniques help developers locate the cause of errors.
+
+Console Logging: Uses console.log() to display variable values and program progress.
+
+Browser Developer Tools: Helps inspect webpage behavior and identify errors.
+
+Breakpoints: Pause program execution at specific lines.
+
+Step-by-Step Execution: Executes code one line at a time to observe its behavior.
+
+Error Messages: Uses browser console messages to locate possible problems.
+
+6. Using Browser Developer Tools
+
+Browser Developer Tools provide facilities for debugging JavaScript applications.
+
+Students can:
+
+Open Developer Tools using the browser menu or keyboard shortcuts.
+
+Select the Console tab to view errors.
+
+Inspect variables and output values.
+
+Use the Sources tab to set breakpoints.
+
+Examine program execution and locate faulty statements.
+
+7. Bug Fixing Process
+
+The debugging process involves the following steps:
+
+Run the JavaScript application.
+
+Observe the incorrect behavior.
+
+Identify the location of the error.
+
+Analyze the cause of the bug.
+
+Modify the incorrect code.
+
+Run the application again.
+
+Verify that the error has been corrected.
+
+8. Example of Debugging
+
+Buggy JavaScript code:
+
+let a = 10;
+let b = 5;
+
+console.log(a - c);
+
+Problem: The variable c is not defined, causing a ReferenceError.
+
+Corrected code:
+
+let a = 10;
+let b = 5;
+
+console.log(a - b);
+
+Output:
+
+5
+
+The error is corrected by replacing the undefined variable c with the declared variable b.
+
+9. Testing After Debugging
+
+After fixing a bug, students should test the application to ensure it works correctly.
+
+Test with different input values.
+
+Check whether the expected output is produced.
+
+Verify that the correction has not introduced new errors.
+
+Test normal and exceptional situations.
+
+Review the browser console for remaining errors.
+
+10. Technologies Used
+
+HTML: Provides the structure of the webpage.
+
+CSS: Styles the webpage.
+
+JavaScript: Implements application functionality.
+
+Browser Developer Tools: Helps inspect and debug code.
+
+Code Editor: Used to modify and correct program code.
+
+11. Learning Outcomes
+
+Students will be able to:
+
+Identify syntax, runtime, and logical errors.
+
+Use browser debugging tools effectively.
+
+Analyze error messages and trace program execution.
+
+Correct faulty JavaScript statements.
+
+Test applications after fixing bugs.
+
+Develop problem-solving and analytical skills.
+
+12. Conclusion
+
+The Debugging Challenge provides practical experience in identifying and correcting errors in JavaScript applications. By using debugging techniques and testing corrected code, students develop the skills needed to create reliable, efficient, and error-free web applications.

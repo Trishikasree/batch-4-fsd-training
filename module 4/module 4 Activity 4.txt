@@ -1,0 +1,139 @@
+ module 4 Activity 4: Routing & Navigation Exercise
+1. Aim
+
+To understand and implement routing and navigation in React.js applications using multiple pages, dynamic routes, protected pages, and navigation menus.
+
+2. Introduction
+
+Routing is the process of controlling which content or component is displayed based on the URL. In React applications, routing allows users to move between different views without completely reloading the webpage.
+
+React applications commonly use React Router for implementing routing.
+
+3. Single Page Application (SPA)
+
+A Single Page Application (SPA) loads the main webpage once and dynamically changes the displayed content when the user navigates.
+
+Advantages include:
+
+Faster navigation.
+Better user experience.
+No complete page reload.
+Smooth transitions between views.
+Components can be reused.
+4. Multi-Page Navigation
+
+In a React application, different routes can represent different pages or views.
+
+Examples:
+
+/ → Home
+/about → About
+/products → Products
+/contact → Contact
+/login → Login
+
+When the user selects a menu item, the corresponding component is displayed.
+
+5. Dynamic Routes
+
+Dynamic routes allow a route to display different content based on a value in the URL.
+
+For example:
+
+/products/101
+/products/102
+/products/103
+
+Here, the product ID changes while the same product component can be used to display different product information.
+
+Dynamic routes are useful for:
+
+Product details.
+User profiles.
+Blog posts.
+Student profiles.
+Course pages.
+6. Protected Pages
+
+Protected pages are pages that should only be accessible to authorized users.
+
+Examples:
+
+User Dashboard.
+Profile.
+Admin Panel.
+Order History.
+
+A typical process is:
+
+User → Login → Authentication Check → Protected Page
+
+If the user is not authenticated, the application can redirect them to the login page.
+
+7. Navigation Menus
+
+Navigation menus provide links that allow users to move between different sections of the application.
+
+A navigation menu may contain:
+
+Home
+Products
+About
+Dashboard
+Profile
+Logout
+
+Navigation components can be reused throughout the application.
+
+8. React Router
+
+React Router is a commonly used library for handling routing in React applications.
+
+Important concepts include:
+
+Routes – Define application paths.
+Route – Connects a URL path to a component.
+Link/NavLink – Provides navigation between routes.
+Dynamic Parameters – Allow variable values in URLs.
+Navigate – Used for programmatic navigation or redirection.
+9. Routing Flow
+
+The basic SPA navigation process is:
+
+User Clicks Link → URL Changes → Router Identifies Route → Corresponding Component Loads → UI Updates
+
+The entire webpage does not need to reload.
+
+10. Implementation Process
+
+Students can perform the activity using the following steps:
+
+Create a React application.
+Install and configure React Router.
+Create components for different pages.
+Define routes for each component.
+Create a navigation menu.
+Implement dynamic routes using parameters.
+Create protected routes for authenticated users.
+Test navigation between different routes.
+Test unauthorized access to protected pages.
+11. Technologies Used
+React.js – Builds the application interface.
+React Router – Handles routing and navigation.
+JavaScript – Implements application logic.
+JSX – Defines React components.
+CSS – Styles navigation menus and pages.
+12. Learning Outcome
+
+Students will be able to:
+
+Understand Single Page Application navigation.
+Create multiple routes in React.
+Implement dynamic routes.
+Create navigation menus.
+Understand protected pages and authentication-based access.
+Navigate between components without full-page reloads.
+Develop structured React applications using routing.
+13. Conclusion
+
+The Routing & Navigation Exercise helps students understand how Single Page Applications manage navigation. By implementing multi-page navigation, dynamic routes, protected pages, and navigation menus, students gain practical knowledge of React routing patterns and user-friendly SPA development.

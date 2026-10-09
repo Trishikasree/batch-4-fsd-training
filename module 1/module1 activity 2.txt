@@ -1,0 +1,49 @@
+
+1. Aim
+
+To develop students' logical thinking and problem-solving skills by solving problems using flowcharts, pseudocode, and programming code.
+
+2. Introduction
+
+Logic building is the process of developing a step-by-step approach to solve a given problem. Before writing code, students can represent the solution using pseudocode and flowcharts.
+
+3. Problem Analysis
+Understand the given problem clearly.
+Identify the required inputs and outputs.
+Break the problem into smaller steps.
+4. Pseudocode
+Pseudocode represents the solution using simple English-like statements.
+It helps students plan the logic before writing actual code.
+5. Flowchart
+A flowchart represents the solution graphically.
+Standard symbols such as Start/End, Input/Output, Process, and Decision are used.
+6. Logic Building
+
+Students solve problems by applying:
+
+Sequence – executing steps in order.
+Selection – making decisions using conditions.
+Iteration – repeating a set of instructions using loops.
+7. Progressive Problems
+
+Problems can be arranged from simple to complex:
+
+Find the sum of two numbers.
+Check whether a number is even or odd.
+Find the largest of three numbers.
+Calculate factorial using a loop.
+Check whether a number is prime.
+Find the largest and smallest elements in an array.
+8. Implementation
+After preparing the pseudocode and flowchart, students convert the logic into programming code.
+The program is executed and tested with different inputs.
+9. Testing and Debugging
+Students verify whether the program produces the expected output.
+Errors are identified and corrected by modifying the logic or code.
+10. Learning Outcome
+
+Students develop logical thinking, problem-solving, algorithmic thinking, and programming skills by progressing from problem analysis to pseudocode, flowcharts, and finally executable code.
+
+11. Conclusion
+
+The activity helps students understand that a programming problem should first be analyzed and logically designed before implementation. This approach makes coding easier, structured, and less prone to errors.

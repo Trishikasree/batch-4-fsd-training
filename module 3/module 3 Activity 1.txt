@@ -1,0 +1,69 @@
+ module 3 Activity 1: API Data Retrieval
+1. Aim
+
+To understand how to consume data from public APIs and display the retrieved information dynamically on a webpage.
+
+2. Introduction
+
+An API (Application Programming Interface) allows different software applications to communicate with each other. A web API enables a webpage or application to request data from a remote server and use that data in its interface.
+
+3. Public API
+A public API provides data or services that can be accessed by external applications.
+APIs can provide information such as weather, movies, books, news, geographical data, and other resources.
+The data is commonly returned in JSON (JavaScript Object Notation) format.
+4. API Request
+The webpage sends a request to the API endpoint.
+The request may contain parameters such as a search term, ID, or location.
+The API server processes the request and returns the required data.
+5. Fetching API Data
+
+JavaScript provides the Fetch API to retrieve data from web APIs.
+
+The general process is:
+
+API Request → Server Processing → API Response → JSON Data → Webpage Display
+
+6. JSON Data
+JSON is a lightweight format used to exchange data between applications.
+It represents information using key-value pairs, objects, and arrays.
+JavaScript can convert the received JSON data into usable objects.
+7. Dynamic Data Display
+
+Students use JavaScript to display the retrieved information on a webpage.
+
+For example, an application can:
+
+Retrieve weather information.
+Display movie details.
+Show book information.
+Display a list of products.
+Retrieve and display user information.
+8. Error Handling
+
+API requests may fail because of network problems, invalid requests, unavailable servers, or incorrect data.
+
+Students should handle errors and display appropriate messages such as:
+
+"Unable to retrieve data. Please try again."
+
+9. Technologies Used
+HTML – Creates the webpage structure.
+CSS – Styles the displayed information.
+JavaScript – Sends API requests, processes responses, and updates the webpage.
+Fetch API – Retrieves data from the public API.
+JSON – Represents the retrieved data.
+10. Testing
+
+Students test the application by:
+
+Sending API requests.
+Checking whether data is retrieved correctly.
+Verifying that the data is displayed dynamically.
+Testing invalid requests and network errors.
+11. Learning Outcome
+
+Students understand how APIs enable applications to retrieve external data and learn how to process JSON responses and dynamically display API data using JavaScript.
+
+12. Conclusion
+
+This activity helps students understand the practical use of APIs in web development. By retrieving data from public APIs and displaying it dynamically, students learn how modern web applications communicate with external services and use real-time or external data.

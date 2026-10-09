@@ -1,0 +1,56 @@
+Activity 3: Real-world Scenario Mapping
+1. Aim
+
+To help students understand how real-world applications are designed by identifying their frontend, backend, and database components.
+
+2. Introduction
+
+Modern applications consist of different components that work together to provide services to users. The frontend handles the user interface, the backend processes requests and business logic, and the database stores and manages information.
+
+3. Application Identification
+
+Students identify applications they commonly use in their daily lives, such as:
+
+WhatsApp
+Instagram
+YouTube
+Amazon
+Google Maps
+Online Banking
+Food Delivery Applications
+4. Frontend
+The frontend is the user-facing part of an application.
+It includes screens, buttons, menus, forms, images, and other interactive elements.
+Technologies such as HTML, CSS, JavaScript, and React can be used to develop the frontend.
+5. Backend
+The backend works behind the user interface.
+It handles requests, authentication, business logic, and communication with the database.
+Technologies such as Node.js, Python, Java, and PHP can be used for backend development.
+6. Database
+The database stores application-related information.
+It may contain user accounts, messages, products, orders, payments, and other data.
+Examples include MySQL, PostgreSQL, MongoDB, and Oracle.
+7. Component Mapping
+
+Students map each application into three major components:
+
+Application	Frontend	Backend	Database
+Online Shopping	Product pages, cart, login	Order and payment processing	Users, products, orders
+Food Delivery	Restaurant and menu screens	Order and delivery processing	Users, restaurants, orders
+Social Media	Posts, profiles, messages	Authentication and content processing	Users, posts, messages
+Online Banking	Account and transaction screens	Transaction processing	Accounts, transactions
+8. Data Flow
+
+The basic working flow of an application is:
+
+User → Frontend → Backend → Database → Backend → Frontend → User
+
+For example, when a user places an online shopping order, the frontend sends the order details to the backend. The backend processes the order and stores the information in the database. The result is then displayed to the user through the frontend.
+
+9. Learning Outcome
+
+Students understand the roles of frontend, backend, and database and how these components work together in real-world applications.
+
+10. Conclusion
+
+This activity helps students connect theoretical concepts with applications they use every day. By mapping the frontend, backend, and database components, students gain a clear understanding of the basic architecture and data flow of modern applications.

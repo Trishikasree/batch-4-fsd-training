@@ -1,0 +1,38 @@
+Activity 1: How the Internet Works
+1. Aim
+
+To understand how a browser, server, and database communicate to process requests and return responses.
+
+2. Introduction
+
+The Internet is a global network that allows computers and devices to communicate and exchange information.
+
+3. Browser
+A browser such as Chrome, Edge, or Firefox is used to access websites.
+It sends requests to the server and displays the received response.
+4. Web Server
+A server receives requests from the browser.
+It processes the request and communicates with the database when required.
+5. Database
+A database stores and manages information.
+It retrieves the required data when the server sends a query.
+6. Request
+The browser sends an HTTP/HTTPS request to the server.
+The request contains information about the resource or operation required.
+7. Processing
+The server receives and processes the request.
+If necessary, it sends a query to the database to retrieve or update information.
+8. Response
+The database returns the required information to the server.
+The server sends an HTTP/HTTPS response back to the browser.
+9. Request–Response Flow
+
+User → Browser → Server → Database → Server → Browser → User
+
+10. Example
+
+When a user logs into a website, the browser sends the username and password to the server. The server checks the database and sends the login result back to the browser.
+
+11. Conclusion
+
+The Internet works through communication between the browser, server, and database. The browser sends a request, the server processes it, the database provides the required data, and the server returns the response to the browser.

@@ -1,0 +1,543 @@
+
+```css
+/* ==============================
+   GLOBAL STYLES
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #f8f9ff;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* ==============================
+   NAVIGATION BAR
+================================= */
+
+header {
+    background: #111827;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo span {
+    color: #a78bfa;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #a78bfa;
+}
+
+
+/* ==============================
+   HAMBURGER MENU BUTTON
+================================= */
+
+.menu-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.menu-btn span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    border-radius: 3px;
+}
+
+
+/* ==============================
+   HERO SECTION
+================================= */
+
+.hero {
+    min-height: 600px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background:
+        linear-gradient(
+            rgba(17, 24, 39, 0.85),
+            rgba(79, 70, 229, 0.85)
+        ),
+        linear-gradient(135deg, #4f46e5, #9333ea);
+}
+
+.hero-content {
+    max-width: 800px;
+    color: white;
+}
+
+.welcome {
+    letter-spacing: 4px;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 70px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #fbbf24;
+}
+
+.hero-content > p:not(.welcome) {
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* ==============================
+   BUTTONS
+================================= */
+
+.btn {
+    display: inline-block;
+
+    background: #fbbf24;
+    color: #111827;
+
+    padding: 13px 25px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: #f59e0b;
+}
+
+.secondary-btn {
+    background: white;
+    color: #4f46e5;
+}
+
+.secondary-btn:hover {
+    background: #f3f4f6;
+}
+
+
+/* ==============================
+   COMMON SECTION STYLES
+================================= */
+
+section {
+    padding: 80px 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title p {
+    color: #6366f1;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    margin-top: 8px;
+    color: #111827;
+}
+
+
+/* ==============================
+   ANNOUNCEMENTS
+================================= */
+
+.announcements {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.announcement-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.announcement-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    border-left: 5px solid #6366f1;
+
+    transition: 0.3s;
+}
+
+.announcement-card:hover {
+    transform: translateY(-5px);
+}
+
+.announcement-card h3 {
+    margin-bottom: 12px;
+    color: #111827;
+}
+
+.announcement-card p {
+    color: #666;
+}
+
+
+/* ==============================
+   FEATURED EVENTS
+================================= */
+
+.featured-events {
+    background: #eef2ff;
+}
+
+.event-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.event-card {
+    background: white;
+
+    padding: 35px 30px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.event-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.event-card h3 {
+    font-size: 23px;
+    margin-bottom: 12px;
+    color: #111827;
+}
+
+.event-card p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.event-card a {
+    color: #4f46e5;
+    font-weight: bold;
+}
+
+
+/* ==============================
+   CALL TO ACTION
+================================= */
+
+.cta {
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4f46e5,
+            #9333ea
+        );
+
+    color: white;
+}
+
+.cta h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
+/* ==============================
+   FOOTER
+================================= */
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+}
+
+.footer-content {
+    padding: 45px 20px 25px;
+}
+
+.footer-content h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    color: #d1d5db;
+    margin-bottom: 5px;
+}
+
+.copyright {
+    border-top: 1px solid #374151;
+    padding: 18px;
+}
+
+.copyright p {
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+
+/* ==============================
+   TABLET RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 900px) {
+
+    .announcement-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .event-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+}
+
+
+/* ==============================
+   MOBILE RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 768px) {
+
+    /* Navigation */
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        background: #111827;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 20px;
+
+        gap: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Show hamburger button */
+
+    .menu-btn {
+        display: block;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero-content > p:not(.welcome) {
+        font-size: 17px;
+    }
+
+
+    /* Announcements */
+
+    .announcement-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Events */
+
+    .event-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Section titles */
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+
+    /* CTA */
+
+    .cta h2 {
+        font-size: 28px;
+    }
+}
+
+
+/* ==============================
+   SMALL MOBILE DEVICES
+================================= */
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 40px 15px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .welcome {
+        font-size: 12px;
+    }
+
+    .hero-content > p:not(.welcome) {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 60px 15px;
+    }
+
+    .section-title h2 {
+        font-size: 27px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    /* Smaller hamburger icon */
+
+    .menu-btn span {
+        width: 25px;
+        height: 3px;
+        margin: 4px 0;
+    }
+}
+```

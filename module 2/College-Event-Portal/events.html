@@ -1,0 +1,1018 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Events | PEC Fest 2026</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Events Page CSS -->
+    <style>
+
+        /* ==============================
+           EVENTS HERO
+        ================================= */
+
+        .page-hero {
+            background:
+                linear-gradient(
+                    rgba(17, 24, 39, 0.85),
+                    rgba(79, 70, 229, 0.85)
+                );
+
+            color: white;
+
+            text-align: center;
+
+            padding: 90px 20px;
+        }
+
+        .page-hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .page-hero p {
+            font-size: 19px;
+        }
+
+
+        /* ==============================
+           EVENT FILTER BUTTONS
+        ================================= */
+
+        .event-filters {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            margin: 5px;
+
+            border: 2px solid #6366f1;
+
+            background: white;
+
+            color: #4f46e5;
+
+            border-radius: 25px;
+
+            cursor: pointer;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #6366f1;
+            color: white;
+        }
+
+
+        /* ==============================
+           EVENTS GRID
+        ================================= */
+
+        .events-section {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .events-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .full-event-card {
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.08);
+
+            transition: 0.3s;
+        }
+
+        .full-event-card:hover {
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .full-event-card.hidden {
+            display: none;
+        }
+
+        .full-event-icon {
+            font-size: 45px;
+
+            margin-bottom: 15px;
+        }
+
+        .full-event-card h3 {
+            font-size: 24px;
+
+            margin-bottom: 10px;
+
+            color: #111827;
+        }
+
+        .event-description {
+            color: #666;
+
+            margin-bottom: 15px;
+        }
+
+        .event-info {
+            margin: 15px 0;
+        }
+
+        .event-info p {
+            margin: 6px 0;
+
+            color: #444;
+
+            font-size: 14px;
+        }
+
+        .event-category {
+            display: inline-block;
+
+            background: #eef2ff;
+
+            color: #4f46e5;
+
+            padding: 5px 12px;
+
+            border-radius: 20px;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* ==============================
+           SCHEDULE
+        ================================= */
+
+        .schedule-section {
+            background: #eef2ff;
+        }
+
+        .schedule-table-container {
+            max-width: 1000px;
+
+            margin: auto;
+
+            overflow-x: auto;
+        }
+
+        .schedule-table {
+            width: 100%;
+
+            border-collapse: collapse;
+
+            background: white;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+        }
+
+        .schedule-table th,
+        .schedule-table td {
+            padding: 16px;
+
+            text-align: left;
+
+            border-bottom: 1px solid #ddd;
+        }
+
+        .schedule-table th {
+            background: #4f46e5;
+
+            color: white;
+        }
+
+        .schedule-table tr:hover {
+            background: #f5f5ff;
+        }
+
+
+        /* ==============================
+           MOBILE EVENTS
+        ================================= */
+
+        @media (max-width: 900px) {
+
+            .events-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .page-hero h1 {
+                font-size: 45px;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-hero {
+                padding: 70px 20px;
+            }
+
+            .page-hero h1 {
+                font-size: 38px;
+            }
+
+            .schedule-table {
+                min-width: 700px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==============================
+         NAVIGATION
+    ================================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                PEC <span>FEST 2026</span>
+            </div>
+
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="events.html">
+                        Events
+                    </a>
+                </li>
+
+                <li>
+                    <a href="register.html">
+                        Register
+                    </a>
+                </li>
+
+                <li>
+                    <a href="gallery.html">
+                        Gallery
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <!-- Mobile Menu -->
+
+            <button
+                class="menu-btn"
+                onclick="toggleMenu()"
+                aria-label="Open navigation menu"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ==============================
+         PAGE HERO
+    ================================= -->
+
+    <section class="page-hero">
+
+        <h1>
+            Our Events
+        </h1>
+
+        <p>
+            Explore exciting technical, cultural and
+            creative events at PEC Fest 2026.
+        </p>
+
+    </section>
+
+
+    <!-- ==============================
+         EVENT LISTINGS
+    ================================= -->
+
+    <section class="events-section">
+
+        <div class="section-title">
+
+            <p>
+                EXPLORE
+            </p>
+
+            <h2>
+                Event Listings
+            </h2>
+
+        </div>
+
+
+        <!-- Filter Buttons -->
+
+        <div class="event-filters">
+
+            <button
+                class="filter-btn active"
+                onclick="filterEvents('all', this)"
+            >
+                All Events
+            </button>
+
+            <button
+                class="filter-btn"
+                onclick="filterEvents('technical', this)"
+            >
+                Technical
+            </button>
+
+            <button
+                class="filter-btn"
+                onclick="filterEvents('cultural', this)"
+            >
+                Cultural
+            </button>
+
+            <button
+                class="filter-btn"
+                onclick="filterEvents('competition', this)"
+            >
+                Competitions
+            </button>
+
+        </div>
+
+
+        <!-- Events -->
+
+        <div class="events-grid">
+
+
+            <!-- Event 1 -->
+
+            <div
+                class="full-event-card"
+                data-category="technical"
+            >
+
+                <div class="full-event-icon">
+                    💻
+                </div>
+
+                <span class="event-category">
+                    TECHNICAL
+                </span>
+
+                <h3>
+                    Code Clash
+                </h3>
+
+                <p class="event-description">
+                    Solve challenging programming problems
+                    and prove your coding skills.
+                </p>
+
+                <div class="event-info">
+
+                    <p>
+                        📅 October 20, 2026
+                    </p>
+
+                    <p>
+                        ⏰ 10:00 AM - 12:00 PM
+                    </p>
+
+                    <p>
+                        📍 Computer Lab
+                    </p>
+
+                    <p>
+                        👥 Team Size: 2 Members
+                    </p>
+
+                </div>
+
+                <a
+                    href="register.html"
+                    class="btn"
+                >
+                    Register
+                </a>
+
+            </div>
+
+
+            <!-- Event 2 -->
+
+            <div
+                class="full-event-card"
+                data-category="technical"
+            >
+
+                <div class="full-event-icon">
+                    🤖
+                </div>
+
+                <span class="event-category">
+                    TECHNICAL
+                </span>
+
+                <h3>
+                    AI Innovation
+                </h3>
+
+                <p class="event-description">
+                    Present innovative Artificial Intelligence
+                    ideas and solutions.
+                </p>
+
+                <div class="event-info">
+
+                    <p>
+                        📅 October 20, 2026
+                    </p>
+
+                    <p>
+                        ⏰ 1:00 PM - 3:00 PM
+                    </p>
+
+                    <p>
+                        📍 Seminar Hall
+                    </p>
+
+                    <p>
+                        👥 Team Size: 2-4 Members
+                    </p>
+
+                </div>
+
+                <a
+                    href="register.html"
+                    class="btn"
+                >
+                    Register
+                </a>
+
+            </div>
+
+
+            <!-- Event 3 -->
+
+            <div
+                class="full-event-card"
+                data-category="technical"
+            >
+
+                <div class="full-event-icon">
+                    🌐
+                </div>
+
+                <span class="event-category">
+                    TECHNICAL
+                </span>
+
+                <h3>
+                    Web Design Challenge
+                </h3>
+
+                <p class="event-description">
+                    Design a creative and responsive website
+                    within the given time.
+                </p>
+
+                <div class="event-info">
+
+                    <p>
+                        📅 October 20, 2026
+                    </p>
+
+                    <p>
+                        ⏰ 2:00 PM - 4:00 PM
+                    </p>
+
+                    <p>
+                        📍 Innovation Lab
+                    </p>
+
+                    <p>
+                        👥 Team Size: 1-2 Members
+                    </p>
+
+                </div>
+
+                <a
+                    href="register.html"
+                    class="btn"
+                >
+                    Register
+                </a>
+
+            </div>
+
+
+            <!-- Event 4 -->
+
+            <div
+                class="full-event-card"
+                data-category="cultural"
+            >
+
+                <div class="full-event-icon">
+                    💃
+                </div>
+
+                <span class="event-category">
+                    CULTURAL
+                </span>
+
+                <h3>
+                    Dance Fiesta
+                </h3>
+
+                <p class="event-description">
+                    Showcase your dance skills and
+                    energetic performances.
+                </p>
+
+                <div class="event-info">
+
+                    <p>
+                        📅 October 21, 2026
+                    </p>
+
+                    <p>
+                        ⏰ 10:00 AM - 12:00 PM
+                    </p>
+
+                    <p>
+                        📍 Main Auditorium
+                    </p>
+
+                    <p>
+                        👥 Team Size: 1-8 Members
+                    </p>
+
+                </div>
+
+                <a
+                    href="register.html"
+                    class="btn"
+                >
+                    Register
+                </a>
+
+            </div>
+
+
+            <!-- Event 5 -->
+
+            <div
+                class="full-event-card"
+                data-category="cultural"
+            >
+
+                <div class="full-event-icon">
+                    🎤
+                </div>
+
+                <span class="event-category">
+                    CULTURAL
+                </span>
+
+                <h3>
+                    Battle of Bands
+                </h3>
+
+                <p class="event-description">
+                    Bring your band together and
+                    perform your best music.
+                </p>
+
+                <div class="event-info">
+
+                    <p>
+                        📅 October 21, 2026
+                    </p>
+
+                    <p>
+                        ⏰ 2:00 PM - 4:00 PM
+                    </p>
+
+                    <p>
+                        📍 Open Auditorium
+                    </p>
+
+                    <p>
+                        👥 Team Size: 3-6 Members
+                    </p>
+
+                </div>
+
+                <a
+                    href="register.html"
+                    class="btn"
+                >
+                    Register
+                </a>
+
+            </div>
+
+
+            <!-- Event 6 -->
+
+            <div
+                class="full-event-card"
+                data-category="competition"
+            >
+
+                <div class="full-event-icon">
+                    🏆
+                </div>
+
+                <span class="event-category">
+                    COMPETITION
+                </span>
+
+                <h3>
+                    Quiz Masters
+                </h3>
+
+                <p class="event-description">
+                    Challenge your knowledge and compete
+                    against the best teams.
+                </p>
+
+                <div class="event-info">
+
+                    <p>
+                        📅 October 21, 2026
+                    </p>
+
+                    <p>
+                        ⏰ 10:00 AM - 11:30 AM
+                    </p>
+
+                    <p>
+                        📍 Seminar Hall
+                    </p>
+
+                    <p>
+                        👥 Team Size: 2 Members
+                    </p>
+
+                </div>
+
+                <a
+                    href="register.html"
+                    class="btn"
+                >
+                    Register
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         EVENT SCHEDULE
+    ================================= -->
+
+    <section class="schedule-section">
+
+        <div class="section-title">
+
+            <p>
+                PLAN YOUR DAY
+            </p>
+
+            <h2>
+                Event Schedule
+            </h2>
+
+        </div>
+
+
+        <div class="schedule-table-container">
+
+            <table class="schedule-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Time
+                        </th>
+
+                        <th>
+                            Event
+                        </th>
+
+                        <th>
+                            Category
+                        </th>
+
+                        <th>
+                            Venue
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            10:00 AM
+                        </td>
+
+                        <td>
+                            Code Clash
+                        </td>
+
+                        <td>
+                            Technical
+                        </td>
+
+                        <td>
+                            Computer Lab
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            11:00 AM
+                        </td>
+
+                        <td>
+                            Quiz Masters
+                        </td>
+
+                        <td>
+                            Competition
+                        </td>
+
+                        <td>
+                            Seminar Hall
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            1:00 PM
+                        </td>
+
+                        <td>
+                            AI Innovation
+                        </td>
+
+                        <td>
+                            Technical
+                        </td>
+
+                        <td>
+                            Seminar Hall
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            2:00 PM
+                        </td>
+
+                        <td>
+                            Web Design Challenge
+                        </td>
+
+                        <td>
+                            Technical
+                        </td>
+
+                        <td>
+                            Innovation Lab
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            2:00 PM
+                        </td>
+
+                        <td>
+                            Battle of Bands
+                        </td>
+
+                        <td>
+                            Cultural
+                        </td>
+
+                        <td>
+                            Open Auditorium
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            4:00 PM
+                        </td>
+
+                        <td>
+                            Dance Fiesta
+                        </td>
+
+                        <td>
+                            Cultural
+                        </td>
+
+                        <td>
+                            Main Auditorium
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         FOOTER
+    ================================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h3>
+                PEC FEST 2026
+            </h3>
+
+            <p>
+                Prathyusha Engineering College
+            </p>
+
+            <p>
+                Celebrating Talent • Technology • Creativity
+            </p>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                © 2026 PEC Fest. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="js/script.js"></script>
+
+
+    <!-- Event Filter JavaScript -->
+
+    <script>
+
+        function filterEvents(category, button) {
+
+            const cards =
+                document.querySelectorAll(".full-event-card");
+
+            const buttons =
+                document.querySelectorAll(".filter-btn");
+
+
+            // Remove active class from all buttons
+
+            buttons.forEach(function(btn) {
+
+                btn.classList.remove("active");
+
+            });
+
+
+            // Add active class to clicked button
+
+            button.classList.add("active");
+
+
+            // Show or hide events
+
+            cards.forEach(function(card) {
+
+                const cardCategory =
+                    card.getAttribute("data-category");
+
+
+                if (
+                    category === "all" ||
+                    cardCategory === category
+                ) {
+
+                    card.classList.remove("hidden");
+
+                } else {
+
+                    card.classList.add("hidden");
+
+                }
+
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+```

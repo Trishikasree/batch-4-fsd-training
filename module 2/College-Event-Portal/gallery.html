@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | PEC Fest 2026</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* GALLERY HERO */
+
+        .gallery-hero {
+            text-align: center;
+            padding: 70px 20px;
+            background:
+                linear-gradient(
+                    135deg,
+                    #4f46e5,
+                    #9333ea
+                );
+            color: white;
+        }
+
+        .gallery-hero p {
+            letter-spacing: 3px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .gallery-hero h1 {
+            font-size: 48px;
+        }
+
+
+        /* GALLERY SECTION */
+
+        .gallery-section {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+        /* FILTER BUTTONS */
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .filter-btn {
+            padding: 10px 22px;
+            border: 2px solid #6366f1;
+            background: white;
+            color: #4f46e5;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #6366f1;
+            color: white;
+        }
+
+
+        /* GALLERY GRID */
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+
+        /* GALLERY CARD */
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            height: 260px;
+            background: #e5e7eb;
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* IMAGE */
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: 0.4s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+
+        /* IMAGE OVERLAY */
+
+        .gallery-overlay {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            padding: 25px 20px 20px;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    transparent,
+                    rgba(0, 0, 0, 0.85)
+                );
+
+            transform: translateY(100%);
+            transition: 0.3s;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .gallery-overlay h3 {
+            margin-bottom: 5px;
+            font-size: 20px;
+        }
+
+        .gallery-overlay p {
+            font-size: 14px;
+        }
+
+
+        /* HIDDEN ITEMS */
+
+        .gallery-item.hidden {
+            display: none;
+        }
+
+
+        /* RESPONSIVE DESIGN */
+
+        @media (max-width: 900px) {
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .gallery-hero {
+                padding: 55px 15px;
+            }
+
+            .gallery-hero h1 {
+                font-size: 36px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item {
+                height: 250px;
+            }
+
+            .filter-buttons {
+                gap: 8px;
+            }
+
+            .filter-btn {
+                padding: 9px 16px;
+                font-size: 14px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                PEC <span>FEST 2026</span>
+            </div>
+
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="events.html">
+                        Events
+                    </a>
+                </li>
+
+                <li>
+                    <a href="register.html">
+                        Register
+                    </a>
+                </li>
+
+                <li>
+                    <a href="gallery.html">
+                        Gallery
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <button
+                class="menu-btn"
+                onclick="toggleMenu()"
+                aria-label="Open navigation menu"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- GALLERY HERO -->
+
+    <section class="gallery-hero">
+
+        <p>MEMORIES OF PEC FEST</p>
+
+        <h1>Event Gallery</h1>
+
+    </section>
+
+
+    <!-- GALLERY -->
+
+    <section class="gallery-section">
+
+        <div class="section-title">
+
+            <p>OUR MEMORIES</p>
+
+            <h2>Festival Highlights</h2>
+
+        </div>
+
+
+        <!-- FILTER BUTTONS -->
+
+        <div class="filter-buttons">
+
+            <button
+                class="filter-btn active"
+                onclick="filterGallery('all', this)"
+            >
+                All
+            </button>
+
+            <button
+                class="filter-btn"
+                onclick="filterGallery('technical', this)"
+            >
+                Technical
+            </button>
+
+            <button
+                class="filter-btn"
+                onclick="filterGallery('cultural', this)"
+            >
+                Cultural
+            </button>
+
+            <button
+                class="filter-btn"
+                onclick="filterGallery('competition', this)"
+            >
+                Competitions
+            </button>
+
+        </div>
+
+
+        <!-- GALLERY GRID -->
+
+        <div class="gallery-grid">
+
+
+            <!-- IMAGE 1 -->
+
+            <div
+                class="gallery-item"
+                data-category="technical"
+            >
+
+                <img
+                    src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80"
+                    alt="Students participating in a technical event"
+                >
+
+                <div class="gallery-overlay">
+
+                    <h3>Technical Workshop</h3>
+
+                    <p>
+                        Students exploring technology and innovation.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 2 -->
+
+            <div
+                class="gallery-item"
+                data-category="technical"
+            >
+
+                <img
+                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+                    alt="Students working on computers"
+                >
+
+                <div class="gallery-overlay">
+
+                    <h3>Code Clash</h3>
+
+                    <p>
+                        Participants solving challenging coding problems.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 3 -->
+
+            <div
+                class="gallery-item"
+                data-category="technical"
+            >
+
+                <img
+                    src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80"
+                    alt="Technology team working together"
+                >
+
+                <div class="gallery-overlay">
+
+                    <h3>AI Innovation</h3>
+
+                    <p>
+                        Creative ideas powered by Artificial Intelligence.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 4 -->
+
+            <div
+                class="gallery-item"
+                data-category="cultural"
+            >
+
+                <img
+                    src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=800&q=80"
+                    alt="Live cultural performance"
+                >
+
+                <div class="gallery-overlay">
+
+                    <h3>Cultural Fest</h3>
+
+                    <p>
+                        Amazing performances and unforgettable moments.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 5 -->
+
+            <div
+                class="gallery-item"
+                data-category="cultural"
+            >
+
+                <img
+                    src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=800&q=80"
+                    alt="Dance performance"
+                >
+
+                <div class="gallery-overlay">
+
+                    <h3>Dance Fiesta</h3>
+
+                    <p>
+                        Students showcasing their dancing talent.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 6 -->
+
+            <div
+                class="gallery-item"
+                data-category="cultural"
+            >
+
+                <img
+                    src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80"
+                    alt="Music event"
+                >
+
+                <div class="gallery-overlay">
+
+                    <h3>Battle of Bands</h3>
+
+                    <p>
+                        Music, energy and incredible performances.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 7 -->
+
+            <div
+                class="gallery-item"
+                data-category="competition"
+            >
+
+                <img
+                    src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80"
+                    alt="College competition"
+                >
+
+                <div class="gallery-overlay">
+
+                    <h3>Quiz Masters</h3>
+
+                    <p>
+                        Teams competing to become the quiz champions.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 8 -->
+
+            <div
+                class="gallery-item"
+                data-category="competition"
+            >
+
+                <img
+                    src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80"
+                    alt="Students working as a team"
+                >
+
+                <div class="gallery-overlay">
+
+                    <h3>Team Challenge</h3>
+
+                    <p>
+                        Collaboration, creativity and competition.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 9 -->
+
+            <div
+                class="gallery-item"
+                data-category="competition"
+            >
+
+                <img
+                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
+                    alt="Students participating in a group activity"
+                >
+
+                <div class="gallery-overlay">
+
+                    <h3>Championship</h3>
+
+                    <p>
+                        Celebrating teamwork and achievement.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h3>PEC FEST 2026</h3>
+
+            <p>
+                Prathyusha Engineering College
+            </p>
+
+            <p>
+                Celebrating Talent • Technology • Creativity
+            </p>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                © 2026 PEC Fest. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/script.js"></script>
+
+    <script>
+
+        function filterGallery(category, button) {
+
+            const items =
+                document.querySelectorAll(".gallery-item");
+
+            const buttons =
+                document.querySelectorAll(".filter-btn");
+
+
+            // Remove active class from all buttons
+
+            buttons.forEach(function(btn) {
+
+                btn.classList.remove("active");
+
+            });
+
+
+            // Add active class to clicked button
+
+            button.classList.add("active");
+
+
+            // Filter gallery items
+
+            items.forEach(function(item) {
+
+                const itemCategory =
+                    item.getAttribute("data-category");
+
+
+                if (
+                    category === "all" ||
+                    itemCategory === category
+                ) {
+
+                    item.classList.remove("hidden");
+
+                } else {
+
+                    item.classList.add("hidden");
+
+                }
+
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>
